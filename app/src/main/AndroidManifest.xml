@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".activities.TODOActivity"></activity>
+        <activity android:name=".activities.CommentActivity" />
+        <activity android:name=".activities.PostActivity" />
+        <activity android:name=".activities.UserActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
