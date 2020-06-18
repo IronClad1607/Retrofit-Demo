@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Retrofit Demo</string>
+    <string name="users">Users</string>
+    <string name="posts">Posts</string>
+    <string name="comments">Comments</string>
+    <string name="todo">TODO</string>
 </resources>

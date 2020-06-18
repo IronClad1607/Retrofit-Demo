@@ -3,4 +3,48 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="royalBlue">#4169e1</color>
+
+    <array name="cardColors">
+        <item name="red_400" type="color">#e84e40</item>
+        <item name="pink_400" type="color">#ec407a</item>
+        <item name="purple_400" type="color">#ab47bc</item>
+        <item name="deep_purple_400" type="color">#7e57c2</item>
+        <item name="indigo_400" type="color">#5c6bc0</item>
+        <item name="blue_400" type="color">#738ffe</item>
+        <item name="light_blue_400" type="color">#29b6f6</item>
+        <item name="cyan_400" type="color">#26c6da</item>
+        <item name="teal_400" type="color">#26a69a</item>
+        <item name="green_400" type="color">#2baf2b</item>
+        <item name="light_green_400" type="color">#9ccc65</item>
+        <item name="lime_400" type="color">#d4e157</item>
+        <item name="yellow_400" type="color">#ffee58</item>
+        <item name="orange_400" type="color">#ffa726</item>
+        <item name="deep_orange_400" type="color">#ff7043</item>
+        <item name="brown_400" type="color">#8d6e63</item>
+        <item name="grey_400" type="color">#bdbdbd</item>
+        <item name="blue_grey_400" type="color">#78909c</item>
+        <item name="orange_red">#FF4500</item>
+        <item name="deep_pink">#FF1493</item>
+        <item name="fuchsia">#FF00FF</item>
+        <item name="magenta">#FF00FF</item>
+        <item name="red">#FF0000</item>
+        <item name="green">#008000</item>
+        <item name="dark_green">#006400</item>
+        <item name="blue">#0000FF</item>
+        <item name="medium_blue">#0000CD</item>
+        <item name="dark_blue">#00008B</item>
+        <item name="navy">#000080</item>
+        <item name="aqua">#00FFFF</item>
+        <item name="cornflower_blue">#6495ED</item>
+        <item name="cadet_blue">#5F9EA0</item>
+        <item name="dark_olive_green">#556B2F</item>
+        <item name="indigo">#4B0082</item>
+        <item name="medium_turquoise">#48D1CC</item>
+        <item name="dark_slate_blue">#483D8B</item>
+        <item name="brown">#A52A2A</item>
+        <item name="sienna">#A0522D</item>
+        <item name="yellow_green">#9ACD32</item>
+        <item name="dark_orchid">#9932CC</item>
+    </array>
 </resources>
