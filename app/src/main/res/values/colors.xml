@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="royalBlue">#4169e1</color>
+    <color name="fushsia">#FF00FF</color>
 
     <array name="cardColors">
         <item name="red_400" type="color">#e84e40</item>

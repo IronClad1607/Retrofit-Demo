@@ -30,5 +30,15 @@ class MainActivity : AppCompatActivity() {
             val todoIntent = Intent(this, TODOActivity::class.java)
             startActivity(todoIntent)
         }
+
+        cvAlbums.setOnClickListener {
+            val albumIntent = Intent(this, AlbumActivity::class.java)
+            startActivity(albumIntent)
+        }
+
+        cvPhotos.setOnClickListener {
+            val photoActivity = Intent(this, PhotoActivity::class.java)
+            startActivity(photoActivity)
+        }
     }
 }

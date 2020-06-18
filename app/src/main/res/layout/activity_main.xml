@@ -77,7 +77,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/llFirst"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cvComments"
@@ -127,6 +128,69 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/roboto"
                     android:text="@string/todo"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llThird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llSecond"
+        android:layout_marginTop="5dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAlbums"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.5"
+            android:background="@android:color/holo_green_light"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:elevation="10dp"
+            app:cardCornerRadius="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/albums"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvPhotos"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.5"
+            android:background="@color/fushsia"
+            android:backgroundTint="@color/fushsia"
+            android:elevation="10dp"
+            app:cardCornerRadius="8dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/photo"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold" />

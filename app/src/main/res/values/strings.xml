@@ -4,4 +4,6 @@
     <string name="posts">Posts</string>
     <string name="comments">Comments</string>
     <string name="todo">TODO</string>
+    <string name="albums">Albums</string>
+    <string name="photo">Photos</string>
 </resources>
