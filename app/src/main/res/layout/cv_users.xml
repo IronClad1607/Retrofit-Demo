@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
     android:elevation="10dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="10dp">
@@ -27,6 +28,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/roboto"
             android:text="@string/personal_information"
             android:textColor="@android:color/black"
@@ -109,6 +111,188 @@
 
             <TextView
                 android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="@string/name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llEmail"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/phone_number"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="@string/name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llPhoneNumber"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/website"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWebsite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="@string/name" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llWebsite"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/address"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llStreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleAddress"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/street"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStreet"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="@string/name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSuite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llStreet"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/suite"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSuite"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="@string/name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llSuite"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/city"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/roboto"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                tools:text="@string/name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llZipCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llCity"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/zip_code"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvZipCode"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/roboto"
