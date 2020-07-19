@@ -17,4 +17,10 @@
     <string name="suite">Suite:</string>
     <string name="city">City:</string>
     <string name="zip_code">Zip Code:</string>
+    <string name="coordinates">Coordinates</string>
+    <string name="latitudes">Latitudes:</string>
+    <string name="longitudes">Longitudes:</string>
+    <string name="work_information">Work Information</string>
+    <string name="company_name">Company Name:</string>
+    <string name="catch_phrase">Catch Phrase:</string>
 </resources>
