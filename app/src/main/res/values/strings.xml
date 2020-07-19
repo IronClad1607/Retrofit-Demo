@@ -6,4 +6,8 @@
     <string name="todo">TODO</string>
     <string name="albums">Albums</string>
     <string name="photo">Photos</string>
+    <string name="name">Name:</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="username">Username:</string>
+    <string name="email">Email:</string>
 </resources>
