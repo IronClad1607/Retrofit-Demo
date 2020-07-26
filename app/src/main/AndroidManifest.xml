@@ -11,13 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".activities.PhotoActivity" />
-        <activity android:name=".activities.AlbumActivity" />
-        <activity android:name=".activities.TODOActivity" />
-        <activity android:name=".activities.CommentActivity" />
-        <activity android:name=".activities.PostActivity" />
-        <activity android:name=".activities.UserActivity" />
-        <activity android:name=".activities.MainActivity">
+
+        <activity android:name=".activities.UserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
