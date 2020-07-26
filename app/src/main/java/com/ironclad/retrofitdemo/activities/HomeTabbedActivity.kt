@@ -1,20 +1,33 @@
 package com.ironclad.retrofitdemo.activities
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.tabs.TabLayout
 import com.ironclad.retrofitdemo.R
 import com.ironclad.retrofitdemo.adapters.ViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_home_tabbed.*
+import androidx.core.content.edit as edit
 
 class HomeTabbedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_tabbed)
         setSupportActionBar(toolbarTabbed)
-        val userId = intent.getStringExtra("userId")
+
+        val sharedPreferences = getSharedPreferences("UserID", Context.MODE_PRIVATE)
+        val userId = intent.getIntExtra("userId", 0)
         val name = intent.getStringExtra("userName")
         val userName = intent.getStringExtra("userUserName")
+        val editor = sharedPreferences.edit()
+        editor.putInt("userID", userId)
+        editor.putString("name", name)
+        editor.putString("userName", userName)
+        editor.apply()
+
+        Log.d("PUI", "$userId $userName")
         supportActionBar?.title = "$name's Profile"
 
         tabLayout!!.addTab(tabLayout!!.newTab().setText("Posts"))

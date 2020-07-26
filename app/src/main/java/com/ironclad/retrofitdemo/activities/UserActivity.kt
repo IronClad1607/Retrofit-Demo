@@ -15,16 +15,19 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 class UserActivity : AppCompatActivity() {
+    private var users: List<User> = emptyList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user)
 
         GlobalScope.launch(Dispatchers.Main) {
-            val users = getUsers()
+            users = getUsers()
             Log.d("PUI", "$users")
-            rvUsers.layoutManager =
-                LinearLayoutManager(this@UserActivity, RecyclerView.HORIZONTAL, false)
-            rvUsers.adapter = UserAdapter(users)
+            runOnUiThread {
+                rvUsers.layoutManager =
+                    LinearLayoutManager(this@UserActivity, RecyclerView.HORIZONTAL, false)
+                rvUsers.adapter = UserAdapter(users)
+            }
         }
     }
 
