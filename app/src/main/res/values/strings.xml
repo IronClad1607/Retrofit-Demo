@@ -23,4 +23,6 @@
     <string name="work_information">Work Information</string>
     <string name="company_name">Company Name:</string>
     <string name="catch_phrase">Catch Phrase:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

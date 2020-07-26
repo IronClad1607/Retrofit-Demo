@@ -1,16 +1,19 @@
 package com.ironclad.retrofitdemo.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater.from
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.ironclad.retrofitdemo.R
+import com.ironclad.retrofitdemo.activities.HomeTabbedActivity
 import com.ironclad.retrofitdemo.modelClass.User
 import kotlinx.android.synthetic.main.cv_users.view.*
 import java.util.*
 
-class UserAdapter(private val users: List<User>, private val context: Context) :
+class UserAdapter(private val users: List<User>) :
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(user: User) {
@@ -33,6 +36,11 @@ class UserAdapter(private val users: List<User>, private val context: Context) :
                 val colors = resources.getIntArray(R.array.cardColors)
                 val randomColor = colors[Random().nextInt(colors.size)]
                 viewColor.setBackgroundColor(randomColor)
+
+                setOnClickListener {
+                    val intent = Intent(context, HomeTabbedActivity::class.java)
+                    startActivity(context, intent, null)
+                }
             }
         }
     }

@@ -24,7 +24,7 @@ class UserActivity : AppCompatActivity() {
             Log.d("PUI", "$users")
             rvUsers.layoutManager =
                 LinearLayoutManager(this@UserActivity, RecyclerView.HORIZONTAL, false)
-            rvUsers.adapter = UserAdapter(users, this@UserActivity)
+            rvUsers.adapter = UserAdapter(users)
         }
     }
 
