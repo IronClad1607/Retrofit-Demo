@@ -8,9 +8,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ironclad.retrofitdemo.R
+import com.ironclad.retrofitdemo.adapters.PostAdapter
 import com.ironclad.retrofitdemo.modelClass.Post
 import com.ironclad.retrofitdemo.networking.RetrofitClient
+import kotlinx.android.synthetic.main.fragment_post.*
+import kotlinx.android.synthetic.main.fragment_post.view.*
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -20,13 +25,18 @@ class PostFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val sharedPreferences = this.activity?.getSharedPreferences("UserID", Context.MODE_PRIVATE)
+        val rootView = inflater.inflate(R.layout.fragment_post, container, false)
+        val sharedPreferences =
+            requireContext().getSharedPreferences("UserID", Context.MODE_PRIVATE)
         val userId = sharedPreferences?.getInt("userID", 0)
-        GlobalScope.launch {
+        val llManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        GlobalScope.launch(Dispatchers.Main) {
             posts = getPostByUser(userId!!)
             Log.d("PUI", "$posts")
+            rootView.rvPost.layoutManager = llManager
+            rootView.rvPost.adapter = PostAdapter(posts)
         }
-        return inflater.inflate(R.layout.fragment_post, container, false)
+        return rootView
     }
 
     private suspend fun getPostByUser(userId: Int): List<Post> {
