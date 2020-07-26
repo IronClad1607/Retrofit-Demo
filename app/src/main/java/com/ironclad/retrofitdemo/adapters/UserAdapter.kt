@@ -39,6 +39,9 @@ class UserAdapter(private val users: List<User>) :
 
                 setOnClickListener {
                     val intent = Intent(context, HomeTabbedActivity::class.java)
+                    intent.putExtra("userName", user.name)
+                    intent.putExtra("userId", user.id)
+                    intent.putExtra("userUserName", user.username)
                     startActivity(context, intent, null)
                 }
             }
