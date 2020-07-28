@@ -17,8 +17,10 @@ class PostAdapter(private val posts: List<Post>) : RecyclerView.Adapter<PostAdap
         private var langCodeTitle: String = ""
         private var langCodeBody: String = ""
 
+        private val languageIdentifier = LanguageIdentification.getClient()
+
         fun bind(post: Post) {
-            val languageIdentifier = LanguageIdentification.getClient()
+
             languageIdentifier.identifyLanguage(post.title)
                 .addOnSuccessListener { languageCode ->
                     langCodeTitle = languageCode!!
