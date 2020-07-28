@@ -1,5 +1,6 @@
 package com.ironclad.retrofitdemo.networking
 
+import com.ironclad.retrofitdemo.modelClass.Album
 import com.ironclad.retrofitdemo.modelClass.Post
 import com.ironclad.retrofitdemo.modelClass.User
 import retrofit2.Response
@@ -13,4 +14,7 @@ interface RetrofitInterface {
 
     @GET("/posts")
     suspend fun getPostByUser(@Query("userId") userId: Int): Response<List<Post>>
+
+    @GET("/albums")
+    suspend fun getAlbumsByUser(@Query("userId") userId: Int): Response<List<Album>>
 }
