@@ -8,10 +8,6 @@ import android.view.ViewGroup
 import com.ironclad.retrofitdemo.R
 
 class AlbumFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
