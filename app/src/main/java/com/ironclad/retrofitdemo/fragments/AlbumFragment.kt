@@ -7,10 +7,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.ironclad.retrofitdemo.R
+import com.ironclad.retrofitdemo.adapters.AlbumAdapter
 import com.ironclad.retrofitdemo.modelClass.Album
 import com.ironclad.retrofitdemo.modelClass.Post
 import com.ironclad.retrofitdemo.networking.RetrofitClient
+import kotlinx.android.synthetic.main.fragment_album.view.*
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -23,16 +28,20 @@ class AlbumFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val rootView = inflater.inflate(R.layout.fragment_album, container, false)
+        val albumRootView = inflater.inflate(R.layout.fragment_album, container, false)
         val sharedPreferences =
             requireContext().getSharedPreferences("UserID", Context.MODE_PRIVATE)
         val userId = sharedPreferences?.getInt("userID", 0)
-        GlobalScope.launch {
+
+        val staggeredGridLayoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+        GlobalScope.launch(Dispatchers.Main) {
             albums = getAlbumByUser(userId!!)
             Log.d(TAG, "$albums")
+            albumRootView.rvAlbums.layoutManager = staggeredGridLayoutManager
+            albumRootView.rvAlbums.adapter = AlbumAdapter(albums)
         }
 
-        return rootView
+        return albumRootView
     }
 
     private suspend fun getAlbumByUser(userId: Int): List<Album> {
