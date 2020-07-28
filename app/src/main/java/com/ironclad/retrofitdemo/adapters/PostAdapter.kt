@@ -1,9 +1,11 @@
 package com.ironclad.retrofitdemo.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.google.mlkit.nl.languageid.LanguageIdentification
 import com.ironclad.retrofitdemo.R
 import com.ironclad.retrofitdemo.modelClass.Post
 import kotlinx.android.synthetic.main.cv_post.view.*
@@ -12,10 +14,25 @@ import java.util.*
 class PostAdapter(private val posts: List<Post>) : RecyclerView.Adapter<PostAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private var langCodeTitle: String = ""
+        private var langCodeBody: String = ""
+
         fun bind(post: Post) {
+            val languageIdentifier = LanguageIdentification.getClient()
+            languageIdentifier.identifyLanguage(post.title)
+                .addOnSuccessListener { languageCode ->
+                    langCodeTitle = languageCode!!
+                }
+            languageIdentifier.identifyLanguage(post.body)
+                .addOnSuccessListener { languageCode ->
+                    langCodeBody = languageCode!!
+                }
+
+            Log.d("PUI", "${post.id} $langCodeBody $langCodeTitle")
+
             with(itemView) {
                 tvTitle.text = post.title
-                tvBody.text = post.title
+                tvBody.text = post.body
 
                 val colors = resources.getIntArray(R.array.cardColors)
                 val randomColor = colors[Random().nextInt(colors.size)]
