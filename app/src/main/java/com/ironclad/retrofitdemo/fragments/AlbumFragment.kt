@@ -14,7 +14,9 @@ class AlbumFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_album, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_album, container, false)
+        
+        return rootView
     }
 
 }
